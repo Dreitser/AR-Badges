@@ -15,8 +15,8 @@
         <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 <!--    <a-scene background="color: #FAFAFA"> -->
     
-    <a-entity camera look-controls orbit-controls="target: .5 0 -.2; minDistance: 0.5; maxDistance: 180; initialPosition: .5 3 -2"></a-entity>
-      
+<!--     <a-entity camera look-controls orbit-controls="target: .5 0 -.2; minDistance: 0.5; maxDistance: 180; initialPosition: .5 3 -2"></a-entity> -->
+      <a-marker type="pattern" preset="custom" url="https://dreitser.github.io/AR-Badges/pattern.patt">
       <a-box position="0 -0.1 0" id="basemap" color="tomato" depth="8" height=".1" width="8"></a-box>
           
       <a-box position="1 0 2" id="roomAB" color="blue" opacity= ".8" depth=".9" height=".45" width=".95"></a-box>
@@ -29,8 +29,12 @@
      
       
       <a-box position=".5 0 -.2"  id="roomMission" color="mediumblue" opacity= ".8" depth="1" height=".5" width="2"></a-box>
-     
+      
+          <a-box position='0 0.5 0' color="yellow"></a-box>
+      </a-marker>
+      <a-entity camera></a-entity>
     </a-scene>
+
   <div class="box" style="position: absolute;bottom: 0px; width: 100%; ">
  
   <nav class="level  is-mobile has-text-centered " style = " overflow-x: scroll; overflow-y: hidden; white-space: nowrap;" id="sessions" >
