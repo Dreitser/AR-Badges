@@ -1,28 +1,45 @@
-a.button2{
- display:inline-block;
- padding:0.5em 3em;
- border:0.16em solid #FFFFFF;
- margin:0 0.3em 0.3em 0;
- box-sizing: border-box;
- text-decoration:none;
- text-transform:uppercase;
- font-family:'Roboto',sans-serif;
- font-weight:400;
- color:#FFFFFF;
- text-align:center;
- transition: all 0.15s;
+.hidden {
+  display: none;
 }
-a.button2:hover{
- color:#DDDDDD;
- border-color:#DDDDDD;
+
+#container {
+  position: absolute;
+  max-height: 50vh;
+  left: 10%;
+  right: 10%;
+  bottom: -2vh;
+  border-radius: 2vh;
+  padding: 1vh 2vh 3vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  background-color: white;
+  transition: 0.35s;
 }
-a.button2:active{
- color:#BBBBBB;
- border-color:#BBBBBB;
+
+#container.collapsed {
+  transform: translateY(10%);
+  opacity: 0;
+  pointer-events: none;
 }
-@media all and (max-width:30em){
- a.button2{
-  display:block;
-  margin:0.4em auto;
- }
+
+#contents {
+  height: 100%;
+  overflow-y: scroll;
+  text-align: justify;
+  font-size: 0.8rem;
+  flex-grow: 1;
+}
+
+#contents h1 {
+  text-align: left;
+}
+
+.outer {
+  flex: 0 0 auto;
+}
+
+#closeButton {
+  float: right;
+  padding: 0.25em;
 }
