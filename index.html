@@ -29,7 +29,18 @@
 </head>
 
 <body>
-
+<div class="container">
+  <div class="outer">
+      <div id="closeButton" onclick="document.getElementById('container').classList.add('collapsed')">close</div>
+  </div>
+  <div id="sessions"></div>
+   
+         <div class="has-text-centered  u-max-full-width" style="scroll: no;" id="timenow"></div>
+         <div class="has-text-centered  u-max-full-width" style="scroll: no;" id="time"></div>        
+            <span class="button u-max-full-width" id="prevBtn" style="scroll: no;" >&#60; Prev</span>
+            <span class="button u-max-full-width" id="nowBtn" style="scroll: no;">Now</span>
+            <span class="button u-max-full-width" id="nextBtn" style="scroll: no;">Next &gt;</span>
+   </div>
   <a-scene
     xrweb="disableWorldTracking: true"
     xrextras-gesture-detector
@@ -74,16 +85,7 @@
     </a-entity>
 
   </a-scene>
-<div class="container" style="position: absolute; bottom: 0px;left: 0px; width: 100%; background-color: #fff; style="scroll: no; overflow-x: hidden;">
- 
-  <div  class="u-max-full-width" style = "margin: 1px; overflow-y: hidden; white-space: nowrap;scroll: no; " id="sessions" >
-   </div>
-         <div class="has-text-centered  u-max-full-width" style="scroll: no;" id="timenow"></div>
-         <div class="has-text-centered  u-max-full-width" style="scroll: no;" id="time"></div>        
-            <span class="button u-max-full-width" id="prevBtn" style="scroll: no;" >&#60; Prev</span>
-            <span class="button u-max-full-width" id="nowBtn" style="scroll: no;">Now</span>
-            <span class="button u-max-full-width" id="nextBtn" style="scroll: no;">Next &gt;</span>
-    </div>
+
 </body>
                                                                        
 </html>
