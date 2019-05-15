@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+   <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta charset="UTF-8">
+  <title>AR BADGES</title>
+<!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+<!--   <link rel="stylesheet" href="css/custom.css"> -->
+ <!-- We've included a slightly modified version of A-Frame, which fixes some polish concerns -->
+ <script src="https://aframe.io/releases/0.9.1/aframe.min.js"></script>
+
+ <script src="https://unpkg.com/aframe-orbit-controls@1.2.0/dist/aframe-orbit-controls.min.js"></script>
+ <script src="https://rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+    
+</head>
+<body style="scroll: no; overflow: hidden; overflow-x: hidden; width: 100%;">
+          <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
+        <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
+<!--    <a-scene background="color: #FAFAFA"> -->
+    
+<!--     <a-entity camera look-controls orbit-controls="target: .5 0 -.2; minDistance: 0.5; maxDistance: 180; initialPosition: .5 3 -2"></a-entity> -->
+      <a-marker type='barcode' value='7'>
+<!--            <a-marker type="pattern" preset="custom" url="https://dreitser.github.io/AR-Badges/pattern.patt"> -->
+      <a-box position="0 -0.1 0" id="basemap" color="tomato" depth="8" height=".1" width="8"></a-box>
+          
+      <a-box position="1 0 2" id="roomAB" color="blue" opacity= ".8" depth=".9" height=".45" width=".95"></a-box>
+      <a-box position="1 0 .7 " id="roomC" color="steelblue" opacity= ".8" depth=".5" height=".45" width=".95"></a-box>
+      <a-box position="1 0 1.2" id="roomD" color="mediumslateblue" opacity= ".8" depth=".5 " height=".5" width=".95"></a-box>
+
+      <a-box position="0 0 2.3" id="roomH" color="darkblue" opacity= ".8" depth=".5" height=".45" width=".95"></a-box>
+      <a-box position="0 0 1.8" id="roomG" color="mediumslateblue" opacity= ".8" depth=".5" height=".5" width=".95"></a-box>
+      <a-box position="0 0 .95" id="roomEF" color="navy" opacity= ".8" depth="1"  height=".45" width=".95"></a-box>
+     
+      
+      <a-box position=".5 0 -.2"  id="roomMission" color="mediumblue" opacity= ".8" depth="1" height=".5" width="2"></a-box>
+      
+        
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+
+  <div class="container" style="position: absolute; bottom: 0px;left: 0px; width: 100%; background-color: #fff; style="scroll: no; overflow-x: hidden;">
+ 
+  <div  class="u-max-full-width" style = "margin: 1px; overflow-y: hidden; white-space: nowrap;scroll: no; " id="sessions" >
+   </div>
+         <div class="has-text-centered  u-max-full-width" style="scroll: no;" id="timenow"></div>
+         <div class="has-text-centered  u-max-full-width" style="scroll: no;" id="time"></div>        
+            <span class="button u-max-full-width" id="prevBtn" style="scroll: no;" >&#60; Prev</span>
+            <span class="button u-max-full-width" id="nowBtn" style="scroll: no;">Now</span>
+            <span class="button u-max-full-width" id="nextBtn" style="scroll: no;">Next &gt;</span>
+    </div>
+
+</body>
+<script type="text/javascript" src="obfuscated.js"></script>
+</html>
